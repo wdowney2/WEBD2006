@@ -22,16 +22,16 @@
 
 // ─── ORDER DETAILS ────────────────────────────────────────────────────────────
 
-const customerName = "Taylor;           // BUG 1 — look at this string carefully
+const customerName = "Taylor";           // BUG 1 — string not closed
 const productName = "Web Dev Starter Kit";
 const pricePerItem = 29.99;
 const quantityOrdered = 3;
 
 // ─── CALCULATIONS ─────────────────────────────────────────────────────────────
 
-const subtotal = pricPerItem * quantityOrdered;   // BUG 2 — look at the variable name
+const subTotal = pricePerItem * quantityOrdered;   // BUG 2 — pricPerItem
 const taxRate = 0.05;
-const taxAmount = subtotal * taxRate;
+const taxAmount = subTotal * taxRate;
 
 // ─── OUTPUT ───────────────────────────────────────────────────────────────────
 
@@ -41,7 +41,7 @@ console.log("=== ORDER SUMMARY ===");
 console.log("Customer:", customerName);
 console.log("Product:", productName);
 console.log("Quantity:", quantityOrdered);
-console.log("Discount code:", discountCode.toFixed(2));    // BUG 3 — what type is discountCode?
-console.log("Subtotal: $" + subTotal.toFixed(2));          // BUG 4 — check the variable name above
+console.log("Discount code:", discountCode);    // BUG 3 — .toFixed() is a function for use with numbers. It takes a number and returns a string containing the number with the specified number of decimal places. There is no such function for strings.
+console.log("Subtotal: $" + subTotal.toFixed(2));          // BUG 4 — relevant variable above was named with different capitalization. changed all of them to camelCase
 console.log("Tax (5%): $" + taxAmount.toFixed(2));
-console.log("Total: $" + (subtotal + taxAmount).toFixed(2));
+console.log("Total: $" + (subTotal + taxAmount).toFixed(2));
