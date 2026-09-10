@@ -11,17 +11,17 @@ function log(logcontent) {
 // TODO: use prompt() to ask for: heroName, noun, verb, adjective, animal, food, place
 //       store each in a descriptively named const
 
-const heroName = prompt("provide heroName pwease");
-const noun = prompt("provide noun pwease");
-const verb = prompt("provide verb pwease");
-const adjective = prompt("provide adjective pwease");
-const animal = prompt("provide animal pwease");
-const food = prompt("provide food pwease");
-const place = prompt("provide place pwease");
+const heroName = prompt("provide heroName");
+const noun = prompt("provide noun");
+const verb = prompt("provide verb");
+const adjective = prompt("provide adjective");
+const animal = prompt("provide animal");
+const food = prompt("provide food");
+const place = prompt("provide place");
 
 // TODO: ask for a sillyNumber and convert it to a number using Number()
 
-const sillyNumber = Number(prompt("provide sillyNumber pwease"));
+const sillyNumber = Number(prompt("provide sillyNumber"));
 
 // ── Step 2: Show string concatenation (the old way) ──────────────────────────
 // TODO: build a short intro string using the + operator (old-school concatenation)
@@ -39,7 +39,7 @@ log(myRivetingTale);
 // ── Step 4: Ask the user to rate the story ───────────────────────────────────
 // TODO: use prompt() + Number() to get a rating from 1 to 10
 
-const rating = Math.min(10, Math.max(1, Number(prompt("rating my awesome stories plwease 1-10"))));
+const rating = Math.min(10, Math.max(1, Number(prompt("rate the story 1-10"))));
 
 // ── Step 5: Calculate stats using arithmetic operators ───────────────────────
 // TODO: calculate the following and store each in a const:
