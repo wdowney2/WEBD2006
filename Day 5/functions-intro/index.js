@@ -2,12 +2,16 @@
 // Objective: Write function declarations with parameters and return values,
 // call functions with appropriate arguments, and understand global vs function scope.
 
+function log(logcontent) {
+    console.log(logcontent);
+    document.getElementById("output").innerHTML = document.getElementById("output").innerHTML + logcontent + "<br>";
+}
 
 // ── Part 1: A simple function with no parameters ──────────────────────────────
 // TODO: declare a function called greetUser that logs "Welcome to the Movie Club!"
 
 function greetUser() {
-    console.log("Welcome to the Movie Club!");
+    log("Welcome to the Movie Club!");
 }
 
 // TODO: call greetUser twice
@@ -20,7 +24,7 @@ greetUser();
 //       and logs a welcome message using it
 
 function greetMember(member) {
-    console.log(`Welcome ${member}!`);
+    log(`Welcome ${member}!`);
 }
 
 // TODO: call greetMember three times with different names
@@ -33,21 +37,34 @@ greetMember("Dark Ringo");
 
 // TODO: declare rateMovieLog(title, score) — uses console.log (returns nothing)
 
-
+function rateMovieLog(title, score) {
+    log(`TITLE: ${title} SCORE: ${score}/10`);
+}
 
 // TODO: declare rateMovie(title, score) — uses return instead of console.log
 
+function rateMovie(title, score) {
+    return `TITLE: ${title} SCORE: ${score}/10`;
+}
 
 // TODO: call rateMovieLog once and observe the output
 
+rateMovieLog("Morbius", "One Morbillion");
+
 // TODO: store the result of rateMovie in a variable and log it
+
+let movieRate = rateMovie("Morbius", "One Morbillion and One");
+log(movieRate);
 
 // TODO: call rateMovie directly inside console.log for at least two movies
 
+log(rateMovie("The Odyssey", "Our Age Of Bronze Is Collapsing"));
+log(rateMovie("Top Gun", "Bottom Gun"));
 
 // ── Part 4: Arithmetic and composing functions ────────────────────────────────
 // TODO: declare calculateAverageRating(rating1, rating2, rating3)
 //       that returns the average of the three ratings
+
 
 
 // TODO: call calculateAverageRating, store the result, and log it
