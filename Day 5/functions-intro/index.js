@@ -65,12 +65,17 @@ log(rateMovie("Top Gun", "Bottom Gun"));
 // TODO: declare calculateAverageRating(rating1, rating2, rating3)
 //       that returns the average of the three ratings
 
-
+function calculateAverageRating(rating1, rating2, rating3) {
+    return (Number(rating1) + Number(rating2) + Number(rating3)) / 3;
+}
 
 // TODO: call calculateAverageRating, store the result, and log it
 
+log(calculateAverageRating(42, 67, 69));
+
 // TODO: pass calculateAverageRating's return value directly into rateMovie
 
+log(rateMovie("A Minecraft Movie", calculateAverageRating(60, 64, 68)));
 
 // ── Part 5: Scope — global vs function ────────────────────────────────────────
 // TODO: declare two global variables: movieCount (start at 0) and clubName
