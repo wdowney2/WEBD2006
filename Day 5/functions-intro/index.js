@@ -6,21 +6,33 @@
 // ── Part 1: A simple function with no parameters ──────────────────────────────
 // TODO: declare a function called greetUser that logs "Welcome to the Movie Club!"
 
+function greetUser() {
+    console.log("Welcome to the Movie Club!");
+}
 
 // TODO: call greetUser twice
 
+greetUser();
+greetUser();
 
 // ── Part 2: Adding a parameter to make it flexible ────────────────────────────
 // TODO: declare a function called greetMember that takes a name parameter
 //       and logs a welcome message using it
 
+function greetMember(member) {
+    console.log(`Welcome ${member}!`);
+}
 
 // TODO: call greetMember three times with different names
 
+greetMember("John");
+greetMember("Ringo");
+greetMember("Dark Ringo");
 
 // ── Part 3: Multiple parameters + return values ───────────────────────────────
 
 // TODO: declare rateMovieLog(title, score) — uses console.log (returns nothing)
+
 
 
 // TODO: declare rateMovie(title, score) — uses return instead of console.log
