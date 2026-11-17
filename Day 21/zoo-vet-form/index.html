@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 21 — Zoo Vet Appointment</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Zoo Vet Appointment Booking</h1>
+
+      <form id="booking-form">
+        <div class="form-group">
+          <label for="animal-name">Animal Name</label>
+          <input type="text" id="animal-name" placeholder="e.g. Koda" />
+          <p id="animal-name-error" class="error"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="species">Species</label>
+          <input type="text" id="species" placeholder="e.g. Polar Bear" />
+          <p id="species-error" class="error"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="appointment-date">Appointment Date</label>
+          <input type="date" id="appointment-date" />
+          <p id="date-error" class="error"></p>
+        </div>
+
+        <div class="form-group">
+          <label for="urgency">Urgency</label>
+          <select id="urgency">
+            <option value="Routine">Routine</option>
+            <option value="Urgent">Urgent</option>
+            <option value="Emergency">Emergency</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="reason">Reason for Visit</label>
+          <textarea id="reason" rows="4" maxlength="200" placeholder="Describe the reason for the visit..."></textarea>
+          <span id="char-count" class="char-count">0 / 200 characters</span>
+          <p id="reason-error" class="error"></p>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit">Book Appointment</button>
+          <button type="button" id="cancel-btn">Cancel</button>
+        </div>
+      </form>
+
+      <div id="summary" class="summary hidden">
+        <h2>Appointment Confirmed</h2>
+        <div id="summary-content"></div>
+      </div>
+
+      <section class="history-section">
+        <h2>Booking History</h2>
+        <div id="history-list">
+          <p class="empty-state">No appointments booked yet.</p>
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
